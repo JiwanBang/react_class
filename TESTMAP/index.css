@@ -1,0 +1,24 @@
+.flex-area {
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-wrap: flex;
+}
+
+.tile1 {
+  width: 10px;
+  height: 10px;
+  background-color: beige;
+}
+
+.tile2 {
+  width: 10px;
+  height: 10px;
+  background-color: aqua;
+}
+
+.tile3 {
+  width: 10px;
+  height: 10px;
+  background-color: azure;
+}
