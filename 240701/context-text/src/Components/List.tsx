@@ -1,11 +1,11 @@
 import { FC } from "react";
-import { Todo as TodoItem } from "../../lib/Todo";
+import { useTodoContext } from "../Context/TodoProvider";
 import Item from "./Item";
 
-const List = () => {
+const List = (): JSX.Element => {
   const {
     state: { todoList },
-  } = useTodoContext;
+  } = useTodoContext();
   return (
     <div>
       {todoList.map((_, idx: number) => (
