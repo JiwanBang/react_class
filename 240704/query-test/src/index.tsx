@@ -1,18 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { TodoProvider } from "./Context/TodoProvider";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: { refetchOnWindowFocus: false },
+  },
+});
+
 root.render(
   // <React.StrictMode>
-  <TodoProvider>
+  <QueryClientProvider client={queryClient}>
     <App />
-  </TodoProvider>
+  </QueryClientProvider>
+
   // </React.StrictMode>
 );
 

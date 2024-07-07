@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "jiwanbang",
+    "password": "1234qwer",
+    "database": "TodoList",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "timezone": "+09:00"
+  },
+  "test": {
+    "username": "jiwanbang",
+    "password": "1234qwer",
+    "database": "TodoList",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "jiwanbang",
+    "password": "1234qwer",
+    "database": "TodoList",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

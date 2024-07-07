@@ -1,18 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { TodoProvider } from "./Context/TodoProvider";
+import { BrowserRouter } from "react-router-dom";
+// Recoil = Context를 쉽게 사용할 수 있게 해주는 라이브러리다.
+// 같은 종류로는 Redux, MobX 등이 있음
+// Recoil도 요즘은 지양하는 편이다 => 전역 상태 자체를 지양함(무거움)
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   // <React.StrictMode>
-  <TodoProvider>
-    <App />
-  </TodoProvider>
+  <RecoilRoot>
+    <BrowserRouter>
+      {/* store 세팅 */}
+      <App />
+    </BrowserRouter>
+  </RecoilRoot>
   // </React.StrictMode>
 );
 

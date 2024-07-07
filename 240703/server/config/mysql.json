@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "jiwanbang",
+    "password": "1234qwer",
+    "database": "todo_list",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
