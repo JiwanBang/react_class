@@ -1,6 +1,7 @@
 "use strict";
 
 import mySQLconfig from "../config/config.json" assert { type: "json" };
+console.log(mySQLconfig);
 import fs from "fs";
 import path from "path";
 import Sequelize, { Model } from "sequelize";
