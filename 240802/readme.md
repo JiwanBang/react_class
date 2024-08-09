@@ -6,6 +6,4 @@
 
 - Development Operations
 
-- 자동 배포(CICD) : Continuous Integration Continuous Deploymen
-
-t
+- 자동 배포(CICD) : Continuous Integration Continuous Deployment

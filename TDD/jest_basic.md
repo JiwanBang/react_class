@@ -7,7 +7,7 @@ npm test
 테스트 한번 돌아가고 a 입력
 
 @testing-library/react 최신버전으로 깔기
-npm i @tesing-library/react@latest
+npm i @testing-library/react@latest
 (매번 새 프로젝트마다 같이 해주기)
 
 ```
