@@ -3,16 +3,10 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { addTodo, getList } from "../lib/todoAxios";
 import { ITodo } from "../lib/todoAxios";
 
-const TodoList = (): JSX.Element => {
-  const [inputValue, setInputValue] = useState("");
+const AddTodo = (): JSX.Element => {
+  const [inputValue, setInputValue] = useState<string>("");
   const client = useQueryClient();
 
-  // const { data, error, isError, isLoading, refetch } = useQuery({
-  //   queryKey: ["get", "/todo"],
-  //   queryFn: getList,
-  // });
-
-  // const [list, setList] = useState<string[]>([]);
   const onChange = useCallback(
     ({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
       setInputValue(value);
@@ -45,18 +39,16 @@ const TodoList = (): JSX.Element => {
 
   return (
     <div>
-      <h1>Todo List</h1>
-      <div>
-        <input type="text" value={inputValue} onChange={onChange} />
-        <button onClick={() => mutate}>Add Todo</button>
-      </div>
-      {/* <ul>
-        {data?.map((item: ITodo, idx: number) => (
-          <li key={idx}>{item.title}</li>
-        ))}
-      </ul> */}
+      <input type="text" value={inputValue} onChange={onChange} />
+      <button
+        onClick={() => {
+          mutate();
+        }}
+      >
+        Add Todo
+      </button>
     </div>
   );
 };
 
-export default TodoList;
+export default AddTodo;

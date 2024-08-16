@@ -1,7 +1,7 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import MockAdapter from "axios-mock-adapter";
 
-import TodoList from "../Components/TodoList";
+import TodoList from "../Components";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import instance from "../lib/axios";
 
@@ -65,9 +65,7 @@ describe("test Todo List", () => {
 
     await waitFor(() => {
       expect(screen.getByText("Todo List")).toBeInTheDocument();
-      expect((screen.getByRole("textbox") as HTMLInputElement).value).toEqual(
-        ""
-      );
+      expect((screen.getByRole("textbox") as HTMLInputElement).value).toBe("");
     });
 
     const listItemElem = screen.getByText("first Todo");
